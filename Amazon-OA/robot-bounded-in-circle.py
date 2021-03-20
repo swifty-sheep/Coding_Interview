@@ -42,12 +42,25 @@ class Solution:
             return False
         return True
 
+    def not_my_solution_but_cool(self, instructions):
+        x, y, dx, dy = 0, 0, 0, 1
+        for i in instructions:
+            if i == "G":
+                x, y = x + dx, y + dy
+            elif i == "L":
+                dx, dy = -dy, dx
+            elif i == "R":
+                dx, dy = dy, dx
+        return (x, y) == (0, 0) or (dx, dy) != (0, 1)
+
 
 def main():
     instructions = "GGLLGG"
     sol = Solution()
     result = sol.is_robot_bounded(instructions=instructions)
     print(result)
+    another_result = sol.not_my_solution_but_cool(instructions)
+    print(another_result)
 
 
 # Driver Code
