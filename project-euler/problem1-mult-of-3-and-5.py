@@ -3,7 +3,7 @@ def sum_of_mult_of_3_or_5(k: int = 1000):
     for i in range(1, k):
         if i % 3 == 0 or i % 5 == 0:
             # print(i)
-            total_sum += i
+            stotal_sum += i
 
     return total_sum
 
