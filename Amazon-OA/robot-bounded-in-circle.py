@@ -50,7 +50,7 @@ class Solution:
             elif i == "L":
                 dx, dy = -dy, dx
             elif i == "R":
-                dx, dy = dy, dx
+                dx, dy = dy, -dx
         return (x, y) == (0, 0) or (dx, dy) != (0, 1)
 
 
